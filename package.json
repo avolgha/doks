@@ -4,5 +4,10 @@
   "private": true,
   "devDependencies": {
     "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "build": "pnpm run -r build",
+    "start:client": "pnpm run -C packages/doks-client watch",
+    "start:server": "pnpm run -C packages/doks-server dev"
   }
 }

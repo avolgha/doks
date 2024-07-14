@@ -13,8 +13,6 @@ const pBrotli = promisify(zlib.brotliCompress);
     logger: true,
   });
 
-  console.log(Array.from(tree.entries()));
-
   server.get("/all", () =>
     Array.from(tree.values()).map(
       (original) => filterObject({ original, exclude: "content" }) as TreeReturn
