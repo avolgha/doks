@@ -1,0 +1,15 @@
+{
+  "name": "@doks/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}

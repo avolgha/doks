@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Geist";
+  font-size: 1rem;
+}
+
+#root {
+  width: 60%;
+  margin: 2.5rem auto 0;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+aside {
+  flex: 1;
+}
+
+main {
+  flex: 2;
+}
+
+.main-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tree {
+  li {
+    position: relative;
+
+    list-style: none;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      transform: translateY(-50%);
+      font-size: 0.75rem;
+      content: "\2b9f";
+      transform-origin: top;
+    }
+
+    &.tree-arrow-collapse::before,
+    &.tree-end::before {
+      content: "\2b9e";
+    }
+
+    &:not(.tree-end) {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  li ~ ul {
+    padding-left: 1rem;
+  }
+
+  ul.tree-collapse {
+    display: none;
+  }
+}
+
+main > h1:first-of-type + span {
+  display: block;
+  margin-bottom: 1.25rem;
+}

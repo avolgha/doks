@@ -1,0 +1,27 @@
+{
+  "name": "@doks/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node -r source-map-support/register .",
+    "dev": "pnpm build && pnpm start",
+    "build": "tsc"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.23.0",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@doks/common": "workspace:*",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.0",
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0"
+  }
+}

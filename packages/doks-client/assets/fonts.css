@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Geist";
+  src: url(assets/GeistVF.woff2) format(woff2),
+    url(assets/GeistVF.woff) format(woff),
+    url(assets/GeistVF.ttf) format(truetype);
+}

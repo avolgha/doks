@@ -1,0 +1,8 @@
+{
+  "name": "doks",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
