@@ -4,11 +4,12 @@ import fastify from "fastify";
 import { promisify } from "node:util";
 import zlib from "node:zlib";
 import { createTree } from "./tree.js";
+import { read } from "read";
 
 const pBrotli = promisify(zlib.brotliCompress);
 
 (async () => {
-  const tree = await createTree();
+  let tree = await createTree();
   const server = fastify({
     logger: true,
   });
@@ -35,4 +36,24 @@ const pBrotli = promisify(zlib.brotliCompress);
   await server.listen({
     port: 8001,
   });
+
+  let key: string;
+  while (true) {
+    key = await read({});
+
+    const actions: Record<string, () => void> = {
+      async r() {
+        tree = await createTree();
+        server.log.info("tree reloaded");
+      },
+      async q() {
+        await server.close();
+        process.exit(0);
+      },
+    };
+
+    if (key in actions) {
+      actions[key]();
+    }
+  }
 })();
