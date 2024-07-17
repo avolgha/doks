@@ -3,8 +3,8 @@ import { filterObject, TreeReturn } from "@doks/common";
 import fastify from "fastify";
 import { promisify } from "node:util";
 import zlib from "node:zlib";
-import { createTree } from "./tree.js";
 import { read } from "read";
+import { createTree } from "./tree.js";
 
 const pBrotli = promisify(zlib.brotliCompress);
 
