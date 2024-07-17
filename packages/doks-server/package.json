@@ -7,15 +7,20 @@
   "scripts": {
     "start": "node -r source-map-support/register .",
     "dev": "pnpm build && pnpm start",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint src"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "@eslint/js": "^9.7.0",
     "@types/node": "^20.14.10",
     "@types/pg": "^8.11.6",
     "drizzle-kit": "^0.23.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
     "source-map-support": "^0.5.21",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1"
   },
   "dependencies": {
     "@doks/common": "workspace:*",

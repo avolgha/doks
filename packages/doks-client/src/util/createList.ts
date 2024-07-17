@@ -16,7 +16,7 @@ export function createList(
     list.appendChild(entry);
 
     if (isDir) {
-      // @ts-ignore -- hmm... should be so i hope
+      // @ts-expect-error -- types are confusing here but there is unfortunately no other good looking way
       const record: Record<string, unknown> = state[key];
 
       // NOTE(avolgha): Little hack because of some problems with

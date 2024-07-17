@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /* Copyright 2017 Google Inc. All Rights Reserved.
 
    Distributed under MIT license.

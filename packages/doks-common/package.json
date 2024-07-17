@@ -6,10 +6,15 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint src"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1"
   }
 }
