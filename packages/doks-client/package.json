@@ -1,6 +1,6 @@
 {
   "name": "@doks/client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "build": "rollup -c",
@@ -9,9 +9,19 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@doks/common": "workspace:*",
-    "flat": "^6.0.1"
+    "flat": "^6.0.1",
+    "rehype-highlight": "^7.0.0",
+    "rehype-highlight-code-lines": "^1.0.4",
+    "rehype-katex": "^7.0.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.0",
+    "rehype-toc": "^3.0.2",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
@@ -19,8 +29,8 @@
     "postcss": "^8.4.39",
     "postcss-nested": "^6.0.1",
     "postcss-preset-env": "^9.6.0",
-    "rollup-plugin-postcss": "^4.0.2",
     "rollup": "^4.18.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.3",
     "typescript": "^5.5.3"
   }

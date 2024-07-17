@@ -1,5 +1,6 @@
 import { fetchContent } from "../util/fetchContent";
 import { getTree } from "../util/getTree";
+import { renderContent } from "../util/renderContent";
 import type { Unpromise } from "../util/types";
 
 export default async function RenderBody(
@@ -16,6 +17,7 @@ export default async function RenderBody(
   let content;
   if (!treeObject.content) {
     content = await fetchContent(id);
+    content = await renderContent(content);
     treeObject.content = content;
     tree.set(path, treeObject);
   } else {
@@ -39,7 +41,7 @@ export default async function RenderBody(
   }
 
   const body = document.createElement("div");
-  body.innerText = content; // TODO(avolgha): add markdown render or similar
+  body.innerHTML = content;
 
   main.innerHTML = "";
   main.append(header, subheader, body);
