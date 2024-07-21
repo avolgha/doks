@@ -9,7 +9,11 @@ import presentEnv from "postcss-preset-env";
 import nested from "postcss-nested";
 import cssnano from "cssnano";
 
-const procudction = !process.env.ROLLUP_WATCH;
+const production = !process.env.ROLLUP_WATCH;
+
+// TODO(avolgha): outsource `util/renderContent.ts` because of
+//                being an huge library that doesn't need to be
+//                recompiled everytime.
 
 export default defineConfig({
   input: "src/index.ts",
@@ -26,6 +30,6 @@ export default defineConfig({
     commonjs(),
     resolve(),
     typescript(),
-    procudction && terser(),
+    production && terser(),
   ],
 });

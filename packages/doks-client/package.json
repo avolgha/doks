@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "scripts": {
+    "dev": "node ./scripts/dev.mjs",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "lint": "eslint src"
